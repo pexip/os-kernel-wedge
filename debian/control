@@ -1,0 +1,17 @@
+Source: kernel-wedge
+Section: utils
+Priority: optional
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Uploaders: Steve Langasek <vorlon@debian.org>, Otavio Salvador <otavio@debian.org>, Ben Hutchings <ben@decadent.org.uk>, Christian Perrier <bubulle@debian.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=d-i/kernel-wedge.git
+Vcs-Git: git://anonscm.debian.org/d-i/kernel-wedge.git
+
+Package: kernel-wedge
+Architecture: all
+Depends: ${misc:Depends}, debhelper (>= 9), make
+Multi-Arch: foreign
+Description: udeb package builder for Debian-Installer
+ kernel-wedge splits udeb packages out of a kernel image deb. The udebs
+ are used by the Debian-Installer.
