@@ -1,3 +1,9 @@
+kernel-wedge (2.89pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Wed, 07 May 2014 16:43:52 +0000
+
 kernel-wedge (2.89) unstable; urgency=medium
 
   [ Ben Hutchings ]
