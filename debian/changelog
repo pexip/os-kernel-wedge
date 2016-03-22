@@ -1,3 +1,50 @@
+kernel-wedge (2.94) unstable; urgency=medium
+
+  [ Héctor Orón Martínez ]
+  * avoid installing package-list and modules which causes build issues when
+    doing Jessie stable backport
+
+  [ Ben Hutchings ]
+  * gen-control,gen-deps,preprocess: Fail early if $KW_DEFCONFIG_DIR is not
+    defined, since there is no longer a fallback available. Update README
+    accordingly.
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 22 Mar 2016 21:29:40 +0100
+
+kernel-wedge (2.93) unstable; urgency=medium
+
+  * preprocess: Simplify parsing by trimming whitespace first
+  * copy-modules, preprocess: Move handling of dash prefix to preprocess
+  * preprocess: Only require existence of wildcard's containing directory
+    if it's a non-optional inclusion
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Wed, 17 Feb 2016 17:36:11 +0000
+
+kernel-wedge (2.92) unstable; urgency=medium
+
+  * Remove unused configuration files (modules/**, package-list)
+  * Remove obsolete items from the TODO list
+  * copy-modules, preprocess: Add support for wildcards in module lists
+  * copy-modules: Check for failure of preprocess
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 15 Feb 2016 03:07:30 +0000
+
+kernel-wedge (2.91) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 12 Feb 2016 19:06:26 +0100
+
+kernel-wedge (2.90) unstable; urgency=medium
+
+  [ Aurelien Jarno ]
+  * copy-modules: Add a trailing slash to the find command searching for
+    modules list. It allows the use of symlinks by looking at the content of
+    the directory they are pointing to instead of the symlinks themselves.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Fri, 12 Sep 2014 23:23:31 +0200
+
 kernel-wedge (2.89) unstable; urgency=medium
 
   [ Ben Hutchings ]
