@@ -11,7 +11,10 @@ my %packages;
 my @builddeps;
 my %excluded;
 
-my $defconfigdir = ($ENV{KW_DEFCONFIG_DIR} || '/usr/share/kernel-wedge');
+my $defconfigdir = $ENV{KW_DEFCONFIG_DIR};
+if (!defined($defconfigdir)) {
+	die "Required environment variable \$KW_DEFCONFIG_DIR is not defined";
+}
 my $configdir = ($ENV{KW_CONFIG_DIR} || '.');
 
 my $fixkernelversion = $ARGV[0];
